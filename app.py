@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 import tensorflow as tf
+model = tf.keras.models.load_model("digit_model.h5")
 import numpy as np
 from PIL import Image
 
