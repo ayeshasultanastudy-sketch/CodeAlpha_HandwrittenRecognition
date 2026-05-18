@@ -1,12 +1,14 @@
 import streamlit as st
-from streamlit_drawable_canvas import st_canvas
-import tensorflow as tf
-model = tf.keras.models.load_model("digit_model.h5")
 import numpy as np
 from PIL import Image
+import tensorflow as tf
+from streamlit_drawable_canvas import st_canvas
 
-# Load trained model
-model = tf.keras.models.load_model("digit_model.h5")
+@st.cache_resource
+def load_model():
+    return tf.keras.models.load_model("digit_model.h5")
+
+model = load_model()
 
 st.set_page_config(page_title="AI Digit Recognition", layout="centered")
 
