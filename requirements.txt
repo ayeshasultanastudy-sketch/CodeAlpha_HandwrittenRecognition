@@ -1,6 +1,6 @@
 streamlit
-tensorflow-cpu==2.15.0
 numpy
+pandas
 pillow
-matplotlib
 streamlit-drawable-canvas
+tensorflow-cpu==2.15.0
